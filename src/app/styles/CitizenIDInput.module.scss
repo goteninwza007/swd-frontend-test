@@ -1,0 +1,21 @@
+$dash-color: #333;
+.row {
+  width: fit-content;
+}
+
+.dash {
+  font-size: 16px;
+  color: $dash-color;
+}
+
+.input1 {
+  width: 80px;
+}
+
+.input2 {
+  width: 140px;
+}
+
+.input3 {
+  width: 200px;
+}

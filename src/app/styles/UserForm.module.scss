@@ -1,0 +1,14 @@
+$border-color: #3a3a3a;
+
+.form {
+  background-color: "transparent";
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.button-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}

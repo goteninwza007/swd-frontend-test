@@ -1,0 +1,39 @@
+$pagination-text-disable-color: #999;
+$pagination-text-hover-color: #1677ff;
+
+.no-border {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.no-border:hover,
+.no-border:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tab-select-all {
+  display: "flex";
+  margin-bottom: 12;
+}
+
+.page-link {
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: $pagination-text-hover-color;
+  }
+}
+
+:global(.ant-pagination-disabled) .page-link {
+  color: $pagination-text-disable-color !important;
+  cursor: not-allowed;
+
+  &:hover {
+    color: $pagination-text-disable-color !important;
+  }
+}

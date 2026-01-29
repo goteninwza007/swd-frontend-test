@@ -1,0 +1,118 @@
+@use "../styles/_shapes.scss" as shapes;
+
+$shape-color: #858585;
+$tag-color: #70c88a;
+$card-color: #ffffff;
+$card-hover-color: #ffa500;
+$divider-color: rgba(64, 64, 64, 0.1);
+
+.header-title {
+    padding: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-bar {
+    gap: 16px
+}
+
+.card {
+  height: 140px;
+  background: $card-color;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $card-hover-color;
+  }
+}
+
+.shapeWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle-left {
+  @include shapes.triangle-left($shape-color);
+  width: 50%;
+}
+
+.triangle-right {
+  @include shapes.triangle-right($shape-color);
+  width: 50%;
+}
+
+.triangle-up {
+  @include shapes.triangle-up($shape-color);
+  width: 50%;
+}
+
+.triangle-down {
+  @include shapes.triangle-down($shape-color);
+  width: 50%;
+}
+
+.triangle-down {
+  @include shapes.triangle-down($shape-color);
+  width: 50%;
+}
+
+.square {
+  @include shapes.square($shape-color);
+}
+
+.rectangle {
+  @include shapes.rectangle($shape-color);
+}
+
+.circle {
+  @include shapes.circle($shape-color);
+  aspect-ratio: 1 / 1;
+}
+
+.ellipse {
+  @include shapes.circle($shape-color);
+  width: 100%;
+}
+
+.trapezoid {
+  @include shapes.trapezoid($shape-color);
+}
+
+.rhombus {
+  @include shapes.rhombus($shape-color);
+}
+
+.tag {
+    position: absolute;
+    bottom: -10%;
+    right: 50;
+    color: white;
+    background-color: $tag-color;
+    padding: 4px 8px;
+    border-radius: 16px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: $divider-color;
+  margin-top: 8px;
+}

@@ -1,20 +1,35 @@
 'use client'
 
-import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+import styles from "./page.module.scss"
+import { Col, Row } from 'antd'
+import Link from 'next/link'
 
-export default function Home() {
-  const { t, i18n } = useTranslation()
+export default function Page() {
+  const { t } = useTranslation()
 
   return (
-    <>
-      <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-      <button onClick={() => i18n.changeLanguage('th')}>TH</button>
-      <h1>{t('home.title')}</h1>
-
-      <Link href="/task1">{t('home.task1')}</Link>
-      <br />
-      <Link href="/task2">{t('home.task2')}</Link>
-    </>
+    <div className={styles.container}>
+      <Row gutter={24} justify="center">
+        <Col span={12}>
+          <Link href="/test1">
+            <div className={styles.card}>
+              <p className={styles['text-primary']}>{t('main-page-option.test-1-title')}</p>
+              <div className={styles.divider} />
+              <p className={styles['text-secondary']}>{t('main-page-option.test-1-description')}</p>
+            </div>
+          </Link>
+        </Col>
+        <Col span={12}>
+          <Link href="/test2">
+            <div className={styles.card}>
+              <p className={styles['text-primary']}>{t('main-page-option.test-2-title')}</p>
+              <div className={styles.divider} />
+              <p className={styles['text-secondary']}>{t('main-page-option.test-2-description')}</p>
+            </div>
+          </Link>
+        </Col>
+      </Row>
+    </div>
   )
 }

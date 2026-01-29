@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container-table {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.header-title {
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.home-button {
+  position: absolute;
+  top: 60px;
+  right: 16px;
+}
